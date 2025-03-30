@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-bg: #10375c;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -11,7 +15,90 @@ body {
   font-size: 1.6rem;
 }
 
+/* ================================= COMMON =============================== */
+
 .main-content {
-  width: calc(100% - 270px);
+  width: 1170px;
   margin: auto;
+  max-width: calc(100% - 48px);
+}
+
+.btn {
+  border-radius: 22px;
+  background-color: #2e80ce;
+  line-height: 30px;
+  padding: 15px 46px;
+  font-size: 1.8rem;
+  line-height: 166.667%;
+  min-width: max-content;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ================================= HEADER ======================== */
+
+.header {
+  background: var(--header-bg);
+  min-height: 100vh;
+  padding-top: 30px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 0 42px;
+}
+
+.header-top__action--login,
+.navbar__link {
+  min-width: max-content;
+  color: #c9d2da;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #fff;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+  content: "";
+  display: inline-block;
+  background: #fff;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  vertical-align: 10%;
+  margin-right: 8px;
+}
+
+.header-top__action {
+  min-width: max-content;
+}
+
+.header-top__action--login:hover {
+  opacity: 0.8;
+}
+
+.header-top__action--signup {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  margin-left: 28px;
+  padding: 8px 20px;
 }

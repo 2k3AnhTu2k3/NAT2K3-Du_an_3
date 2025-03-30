@@ -98,14 +98,44 @@
 
     <title>shine smile</title>
   </head>
-  <body>
-    <header>
+  <body style="height: 10000px">
+    <header class="header">
       <div class="main-content">
         <div class="header-top">
-          <div class="header-top__logo">
-            <img src="./asset/img/logo.svg" alt="logo" />
-            <p>shine</p>
-            <p>smile</p>
+          <!-- logo -->
+          <a href="/" class="logo"
+            ><img src="./asset/img/logo.svg" alt="shine smile"
+          /></a>
+
+          <!-- nav -->
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <!-- item1 -->
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link navbar__link--active">Home</a>
+              </li>
+
+              <!-- item2 -->
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">Services</a>
+              </li>
+
+              <!-- item3 -->
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">About</a>
+              </li>
+
+              <!-- item4 -->
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">Doctors</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- cta action -->
+          <div class="header-top__action">
+            <a href="#!" class="header-top__action--login">Log In</a>
+            <a href="#!" class="btn header-top__action--signup">Sign Up</a>
           </div>
         </div>
       </div>
