@@ -4,6 +4,7 @@
 
 :root {
   --header-bg: #10375c;
+  --primary-color: #575f66;
 }
 
 html {
@@ -53,6 +54,14 @@ a {
   font-weight: 600;
   line-height: 114.286%;
   letter-spacing: -1.4px;
+}
+
+.header-2 {
+  color: var(--header-bg);
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2; /* 120% */
+  letter-spacing: -1px;
 }
 
 /* ================================= HEADER ======================== */
@@ -167,4 +176,19 @@ a {
 .hero__img--small {
   width: 210px;
   height: 410px;
+}
+
+/* ====================================== MAIN ===================================== */
+
+/* ===================== SERVICE ===================== */
+
+.service__header2 {
+}
+
+.service__desc {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.66667;
 }
