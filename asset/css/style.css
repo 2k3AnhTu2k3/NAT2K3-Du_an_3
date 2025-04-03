@@ -424,7 +424,7 @@ a {
 
 /* ===================== TEAM ===================== */
 .team {
-  padding-top: 83px 0 85px;
+  padding: 83px 0 85px;
 }
 
 .team-header {
@@ -476,4 +476,54 @@ a {
   justify-content: center;
   gap: 0 18px;
   margin-top: 38px;
+}
+
+/* ===================== INSTALL ===================== */
+
+.install {
+  padding: 180px 0 85px;
+}
+
+.install__inner {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 76px 70px;
+  border-radius: 4px;
+  background: #2e80ce;
+  position: relative;
+}
+
+.install__img {
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+  position: absolute;
+
+  bottom: 0;
+}
+
+.install__heading {
+  color: #fff;
+  max-width: 489px;
+}
+
+.install__desc {
+  max-width: 586px;
+  color: #fff;
+  margin-bottom: 38px;
+}
+
+.install__app {
+  display: flex;
+  gap: 0 28px;
+}
+
+.install__app--btn {
+  line-height: 0;
+  transition: 0.4s;
+}
+
+.install__app--btn:hover {
+  transform: scale(1.1);
 }
