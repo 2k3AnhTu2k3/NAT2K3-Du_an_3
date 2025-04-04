@@ -537,7 +537,7 @@ a {
 /* ===================== BLOG ===================== */
 
 .blog {
-  margin: 85px 0;
+  padding: 85px 0;
 }
 
 .blog-inner {
@@ -654,4 +654,38 @@ a {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: normal;
+}
+
+/* ===================== APPOINTMENT ===================== */
+
+.appointment {
+  padding: 85px 0;
+}
+
+.appointment-body {
+  background: #f6fbff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.appointment-body__heading {
+  max-width: 813px;
+  margin: 0 auto;
+}
+
+.appointment-body__heading::after {
+  content: "";
+  display: block;
+  max-width: 136px;
+  height: 2px;
+  background: #2e80ce;
+  margin: 18px auto;
+}
+
+.appointment-body__desc {
+  margin: 0 auto 36px;
+  max-width: 617px;
+  color: var(--secondary-color);
+  font-weight: 300;
+  line-height: 1.75;
 }
