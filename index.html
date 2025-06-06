@@ -96,14 +96,28 @@
     <!-- style css-->
     <link rel="stylesheet" href="./asset/css/style.css" />
 
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>shine smile</title>
   </head>
   <body>
     <!-- =================================== HEADER ======================================== -->
+
     <header class="header">
       <div class="main-content">
         <!-- ===== HEADER-TOP ===== -->
         <div class="header-top">
+          <!-- Dark-mode -->
+          <div class="toggle-fix">
+            <div class="toggle-switch">
+              <label for="switch">
+                <input hidden type="checkbox" name="switch" id="switch" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
           <!-- logo -->
           <a href="./" class="logo"
             ><img src="./asset/img/logo.svg" alt="shine smile"
@@ -146,7 +160,13 @@
         <!-- ===== HERO ==== -->
         <section class="hero">
           <!-- hero-left -->
-          <section class="hero__content">
+          <section
+            class="hero__content"
+            data-aos="fade-right"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-mirror="true"
+          >
             <h1 class="header-1">Exceptional dental care for all ages.</h1>
             <p class="hero__desc">
               Exceptional dental care for all ages. Your great smile begins with
@@ -165,7 +185,13 @@
           </section>
           <!-- hero-right -->
           <div class="hero__media">
-            <figure class="hero__images">
+            <figure
+              class="hero__images"
+              data-aos="fade-left"
+              data-aos-offset="100"
+              data-aos-easing="ease-in-sine"
+              data-aos-mirror="true"
+            >
               <img
                 src="./asset/img/header/dentis-1.jpg"
                 alt="Exceptional dental care for all ages."
@@ -193,7 +219,13 @@
             great dentist.
           </p>
 
-          <div class="service__row">
+          <div
+            class="service__row"
+            data-aos="zoom-in-up"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-anchor="#service-item-id"
+          >
             <!-- service-left -->
             <figure>
               <img
@@ -234,7 +266,7 @@
               </section>
 
               <!-- item2 -->
-              <section class="service-item">
+              <section class="service-item" id="service-item-id">
                 <!-- icon -->
 
                 <figure class="service-item__icon">
@@ -311,7 +343,7 @@
           </p>
           <div class="work__list">
             <!-- item-1 -->
-            <section class="work-item">
+            <section class="work-item" data-aos="fade-up-right">
               <img
                 src="./asset/img/MAIN/WORKS/icon-1.svg"
                 alt=""
@@ -328,7 +360,7 @@
             </section>
 
             <!-- item-2 -->
-            <section class="work-item">
+            <section class="work-item" data-aos="fade-up">
               <img
                 src="./asset/img/MAIN/WORKS/icon-2.svg"
                 alt=""
@@ -345,7 +377,7 @@
             </section>
 
             <!-- item-3 -->
-            <section class="work-item">
+            <section class="work-item" data-aos="fade-up-left">
               <img
                 src="./asset/img/MAIN/WORKS/icon-3.svg"
                 alt=""
@@ -365,7 +397,7 @@
       </section>
 
       <!-- =================== ABOUT ================== -->
-      <section class="about">
+      <section class="about" data-aos="zoom-in-up" data-aos-duration="1500">
         <div class="main-content">
           <div class="about-row">
             <!-- about-left -->
@@ -664,7 +696,11 @@
       <!-- =================== APPOINTMENT ================== -->
       <section class="appointment">
         <div class="main-content">
-          <div class="appointment-body">
+          <div
+            class="appointment-body"
+            data-aos="zoom-in-down"
+            data-aos-duration="1000"
+          >
             <h2 class="header-2 appointment-body__heading">
               Always welcoming new patients
             </h2>
@@ -840,5 +876,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- js animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
