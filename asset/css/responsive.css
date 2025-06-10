@@ -1,0 +1,40 @@
+/* PC */
+@media (width >= 992px){
+
+
+}
+
+
+/* Tablet & mobile */
+@media (width < 992px){
+    .navbar{
+        display: none;
+    }
+
+    .header-top{
+        justify-content: end;
+    }
+
+    .header__logo{
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        line-height: 0;
+    }
+
+}
+
+/* Tablet */
+@media (768px <= width < 992px){
+
+}
+
+
+/* Mobile */
+
+@media (width < 768px){
+
+    .header-top__action{
+        display: none;
+    }
+}
