@@ -1,40 +1,446 @@
 /* PC */
-@media (width >= 992px){
-
-
-}
+@media (width > 1024px) {}
 
 
 /* Tablet & mobile */
-@media (width < 992px){
-    .navbar{
+@media (width <=1024px) {
+    .navbar {
         display: none;
     }
 
-    .header-top{
-        justify-content: end;
-    }
 
-    .header__logo{
+    .header__logo {
         position: absolute;
         left: 50%;
         translate: -50% 0;
         line-height: 0;
     }
 
-}
+    .header__menu {
+        display: block;
+        color: #fff;
+    }
 
-/* Tablet */
-@media (768px <= width < 992px){
+    .header-menu__icon {
+        width: 25px;
+        cursor: pointer;
 
-}
+    }
+
+    /* Menu ngăn kéo */
+    .menu-drawer {
+        background-color: #2e1919;
+        position: fixed;
+        inset: 0 40% 0 0;
+        z-index: 3;
+        transform: translateX(-100%);
+        border-top-right-radius: 40px;
+        transition: 0.3s transform ease-out 0.2s;
+        padding: 60px;
+        min-width: 220px;
+        height: 200%;
+    }
+
+    #menu-checkbox:checked~.menu-drawer {
+        transform: translateX(0);
+    }
+
+    .menu-drawer__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* nav in menu-drawer */
+    .navbar-mobile__list {
+        margin-top: 25px;
+    }
 
 
-/* Mobile */
+    .navbar__link {
+        font-size: 2rem;
+        padding: 8px 21px;
+        display: block;
+    }
 
-@media (width < 768px){
+    .navbar__link:hover {
+        background-color: #2e4b4b;
+    }
 
-    .header-top__action{
+    /* sign-in / sign-up mobile  */
+    .login-mobile {
         display: none;
+    }
+
+
+    .close-menu {
+        cursor: pointer;
+
+    }
+
+    .close-menu:active,
+    .header-menu__icon:active,
+    .menu-drawer__logo:active {
+        transform: scale(0.9);
+    }
+
+
+
+
+    /* overlay */
+
+    .menu-overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        inset: 0;
+        z-index: 2;
+        transition: opacity 0.3s ease-out 0.2s, 0s visibility 0.5s;
+        height: 200%;
+    }
+
+    #menu-checkbox:checked~.menu-overlay {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease-out 0.2s;
+    }
+
+
+
+
+    /* ================== HERO ================= */
+    .hero {
+        flex-direction: column-reverse;
+        row-gap: 50px;
+        /* align-items: stretch; */
+    }
+
+    .hero__content {
+        margin: 22px 0 50px;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* =============== SERVICE =================== */
+    .service__row {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .service__img {
+        width: 100%;
+        max-height: 81.43vw;
+    }
+
+    .service-item {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .service__button {
+        text-align: center;
+    }
+
+
+    /* =============== WORK =================== */
+    .work__list {
+        grid-template-columns: auto;
+        justify-content: stretch;
+    }
+
+
+    /* ============== ABOUT =============== */
+
+    .about-row {
+        flex-direction: column;
+    }
+
+    .about-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .about__heading,
+    .about__desc {
+        max-width: none;
+    }
+
+    /* ============ TEAM-TABLET ============= */
+    .team__img {
+        object-position: 50% 0%;
+    }
+
+
+    /* =========== Install ============ */
+
+    .install__inner figure {
+        width: 250px;
+        min-width: 250px;
+    }
+
+
+    .install__img {
+        height: 100%;
+        bottom: 0;
+        object-fit: fill;
+    }
+
+    .install-content {
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .install__app {
+        justify-content: center;
+    }
+
+
+    /* =========== BLOG ============ */
+
+    .blog-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+
+    .blog__content {
+        text-align: center;
+        width: 90%;
+    }
+
+    .blog__heading {
+        max-width: none;
+    }
+
+    .blog__control {
+        justify-content: center;
+    }
+
+
+
+    /* -------------- FOOTER -------------- */
+
+    .footer-body {
+        grid-template-columns: 0.7fr 55%;
+        padding: 0 50px;
+    }
+
+
+    .footer-body__column:first-child {
+        width: 100%;
+        grid-column: 1 / -1;
+        margin-bottom: 40px;
+    }
+
+    .footer-body__column:last-child {
+        width: 100%;
+        grid-column: 1 / -1;
+        margin-bottom: 40px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ======================= TABLET ===================== */
+
+@media (768px < width <=1024px) {
+
+    /* -------------- ABOUT-Tablet -------------- */
+    .about-content {
+        margin-top: calc(82px + 40px + 82px);
+    }
+
+
+
+    /* -------------- TEAM-TABLET --------------- */
+
+    .team__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-body__column:nth-child(3) {
+        justify-self: center;
+    }
+
+
+}
+
+
+/* ====================== MOBILE ========================= */
+
+@media (width <=768px) {
+
+
+    .header-top__action {
+        display: none;
+    }
+
+    .menu-drawer {
+        padding: 60px 30px;
+    }
+
+    .hero__content .header-1,
+    .service__header2,
+    .work .header-2,
+    .about__heading,
+    .install__heading,
+    .blog__heading,
+    .appointment-body__heading,
+    .install__heading,
+    .team__heading {
+        font-size: 4rem;
+    }
+
+    .hero__action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .hero__action--phone {
+        margin-left: 0;
+    }
+
+
+    /* ================ SERVICE ============= */
+    .service {
+        padding: 100px 0;
+    }
+
+    /* ----------------- sign-in / sign-up  ----------------- */
+    .login-mobile {
+        border-top: 1px solid #8c8b8b;
+        margin-top: 20px;
+        padding-top: 30px;
+        display: block;
+    }
+
+    .header-top__action--signup {
+        margin-left: 0;
+    }
+
+    /* --------------- HERO-MOBILE --------------- */
+
+
+    .hero__img--large {
+        width: 634px;
+        max-width: 100%;
+        height: 480px;
+        max-height: 68.6vw;
+        margin-right: 0;
+        object-fit: cover;
+        object-position: 0% 25%;
+    }
+
+    .hero__img--small {
+        display: none;
+    }
+
+    /* -------------- WORK --------------  */
+
+    #work-item {
+        padding: 20px;
+    }
+
+
+
+    /* -------------- ABOUT-MOBILE -------------- */
+    .about {
+        padding: 100px 0;
+    }
+
+    .about__images {
+        width: 570px;
+        max-width: 100%;
+        position: relative;
+        text-align: center;
+        min-width: auto;
+    }
+
+    .about__images--small {
+        display: none;
+    }
+
+    .about__images--large {
+        width: 100%;
+        border-radius: 15px;
+        max-width: 81.43vw;
+    }
+
+
+    /* -------------- TEAM-Mobile -------------- */
+
+    .team__list {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /* ------------ INSTALL ------------ */
+    .install {
+        padding: 85px 0;
+    }
+
+    .install__inner {
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .install__inner figure {
+        display: none;
+    }
+
+
+    .install__app {
+        flex-direction: column-reverse;
+    }
+
+    /* -------------- BLOG -------------- */
+
+    .blog__list {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-item:first-child~.blog-item {
+        display: none;
+    }
+
+
+    /* ------------- APPOINTMENT ---------- */
+    .appointment-body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* -------------- FOOTER --------------= */
+
+    .footer-body {
+        padding: 0;
+        gap: 5px;
+    }
+
+    .footer-body__form {
+        min-width: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-body__column:nth-child(3) {
+        justify-self: center;
     }
 }
